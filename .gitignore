@@ -1,0 +1,4 @@
+wp-themes/
+wp-themes
+# Prevent zip files from being pushed
+*.zip

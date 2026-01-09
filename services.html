@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Layanan BisnisSPBU - Solusi lengkap mulai dari manajemen SPBU, transporter minyak, hingga distribusi LPG untuk industri dan rumah tangga.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Layanan Kami - BisnisSPBU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Extend config for this page
+        tailwind.config.theme.extend.colors["deep-blue"] = "#1a365d";
+        tailwind.config.theme.extend.colors["flame-red"] = "#dc2626";
+        tailwind.config.theme.extend.colors["card-bg"] = "#ffffff";
+        tailwind.config.theme.extend.colors["card-border"] = "#e2e8f0";
+        tailwind.config.theme.extend.fontFamily["heading"] = ["Poppins", "sans-serif"];
+
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: #dc2626;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 20px 40px -10px rgba(220, 38, 38, 0.15);
+        }
+
+        .icon-glow {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.1);
+        }
+
+        .bg-gradient-orb {
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+
+        .bg-gradient-orb-2 {
+            background: radial-gradient(circle, rgba(26, 54, 93, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-50 text-text-main font-display overflow-x-hidden transition-colors duration-300 selection:bg-primary/20 selection:text-primary">
+    <!-- Header from index.html -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                        <img src="images/logo.png" alt="BisnisSPBU Logo" class="w-7 h-7 object-contain">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-tight text-slate-900 leading-none">BisnisSPBU</h1>
+                        <p
+                            class="text-[8px] md:text-[10px] text-slate-500 uppercase tracking-normal md:tracking-widest">
+                            Mitra Terpercaya Sejak 2025</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="index.html">Beranda</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="about.html">Tentang Kami</a>
+                    <a class="text-sm font-medium text-primary transition-colors" href="#">Layanan</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="berita.html">Berita</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="kontak.html">Kontak</a>
+                    <a class="px-5 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(220,38,38,0.39)] hover:shadow-[0_6px_20px_rgba(220,38,38,0.23)] hover:-translate-y-0.5"
+                        href="https://wa.me/6285821763662?text=Halo,%20saya%20tertarik%20dengan%20layanan%20BisnisSPBU.">
+                        Hubungi Kami
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-primary">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-lg p-4 flex flex-col gap-4">
+            <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                href="index.html">Beranda</a>
+            <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="about.html">Tentang
+                Kami</a>
+            <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                href="services.html">Layanan</a>
+            <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                href="berita.html">Berita</a>
+            <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                href="kontak.html">Kontak</a>
+            <a class="px-5 py-2.5 bg-primary hover:bg-primary-hover text-white text-sm font-bold rounded-lg text-center transition-colors"
+                href="https://wa.me/6285821763662?text=Halo,%20saya%20tertarik%20dengan%20layanan%20BisnisSPBU.">Hubungi
+                Kami</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="relative min-h-screen flex flex-col pt-20">
+        <!-- Background Orbs -->
+        <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+            <div
+                class="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-orb rounded-full mix-blend-multiply opacity-70 blur-3xl">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-orb-2 rounded-full mix-blend-multiply opacity-50 blur-3xl">
+            </div>
+        </div>
+
+        <div class="relative z-10 flex flex-1 flex-col layout-container w-full justify-start items-center pt-12 pb-20">
+            <div class="layout-content-container flex flex-col max-w-[1200px] w-full px-6 lg:px-10">
+                <div class="flex flex-col items-center text-center gap-4 mb-16 animate-fade-in-up">
+                    <span
+                        class="text-primary font-bold tracking-widest text-xs uppercase bg-red-50 px-3 py-1 rounded-full border border-red-100">Solusi
+                        Energi Terpadu</span>
+                    <h1
+                        class="text-slate-900 font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight">
+                        LAYANAN <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-red-400">KAMI</span>
+                    </h1>
+                    <p class="text-slate-600 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
+                        Kami menyediakan ekosistem energi yang handal, mulai dari distribusi bahan bakar, transportasi
+                        logistik, hingga penyaluran gas untuk kebutuhan industri dan rumah tangga.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 w-full">
+                    <div
+                        class="glass-card rounded-2xl p-8 flex flex-col gap-6 group relative overflow-hidden bg-white shadow-xl shadow-slate-200/50">
+                        <div
+                            class="absolute top-0 right-0 p-32 bg-red-50 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-red-100 opacity-60">
+                        </div>
+                        <div
+                            class="relative z-10 size-16 rounded-xl bg-gradient-to-br from-red-50 to-white border border-red-100 flex items-center justify-center group-hover:border-primary/30 transition-colors icon-glow shadow-sm">
+                            <span class="material-symbols-outlined text-primary !text-[32px]">local_gas_station</span>
+                        </div>
+                        <div class="relative z-10 flex flex-col gap-3 flex-1">
+                            <h3
+                                class="text-slate-900 font-heading text-2xl font-bold leading-tight group-hover:text-primary transition-colors">
+                                SPBU &amp; Ritel</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Jaringan stasiun pengisian bahan bakar umum modern dengan jaminan kualitas dan takaran
+                                pas untuk mendukung mobilitas kendaraan Anda setiap hari.
+                            </p>
+                        </div>
+                        <div class="relative z-10 mt-auto pt-4">
+                            <button class="flex items-center text-slate-900 text-sm font-bold group/btn"
+                                onclick="window.location.href='spbu-ritel.html'">
+                                <span class="mr-2 group-hover:text-primary transition-colors">Lihat Detail</span>
+                                <span
+                                    class="material-symbols-outlined !text-[18px] transform transition-transform group-hover/btn:translate-x-1 text-primary">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-card rounded-2xl p-8 flex flex-col gap-6 group relative overflow-hidden bg-white shadow-xl shadow-slate-200/50">
+                        <div
+                            class="absolute top-0 right-0 p-32 bg-blue-50 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-blue-100 opacity-60">
+                        </div>
+                        <div
+                            class="relative z-10 size-16 rounded-xl bg-gradient-to-br from-blue-50 to-white border border-blue-100 flex items-center justify-center group-hover:border-blue-500/30 transition-colors shadow-sm">
+                            <span class="material-symbols-outlined text-deep-blue !text-[32px]">local_shipping</span>
+                        </div>
+                        <div class="relative z-10 flex flex-col gap-3 flex-1">
+                            <h3
+                                class="text-slate-900 font-heading text-2xl font-bold leading-tight group-hover:text-deep-blue transition-colors">
+                                Transporter Minyak</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Armada logistik tangki BBM berstandar keamanan tinggi, memastikan distribusi bahan bakar
+                                yang efisien, aman, dan tepat waktu ke seluruh pelosok.
+                            </p>
+                        </div>
+                        <div class="relative z-10 mt-auto pt-4">
+                            <button class="flex items-center text-slate-900 text-sm font-bold group/btn"
+                                onclick="window.location.href='transporter-minyak.html'">
+                                <span class="mr-2 group-hover:text-deep-blue transition-colors">Lihat Detail</span>
+                                <span
+                                    class="material-symbols-outlined !text-[18px] transform transition-transform group-hover/btn:translate-x-1 text-deep-blue">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="glass-card rounded-2xl p-8 flex flex-col gap-6 group relative overflow-hidden bg-white shadow-xl shadow-slate-200/50">
+                        <div
+                            class="absolute top-0 right-0 p-32 bg-orange-50 rounded-full blur-3xl -mr-16 -mt-16 transition-all group-hover:bg-orange-100 opacity-60">
+                        </div>
+                        <div
+                            class="relative z-10 size-16 rounded-xl bg-gradient-to-br from-orange-50 to-white border border-orange-100 flex items-center justify-center group-hover:border-orange-500/30 transition-colors shadow-sm">
+                            <span
+                                class="material-symbols-outlined text-orange-500 !text-[32px]">local_fire_department</span>
+                        </div>
+                        <div class="relative z-10 flex flex-col gap-3 flex-1">
+                            <h3
+                                class="text-slate-900 font-heading text-2xl font-bold leading-tight group-hover:text-orange-600 transition-colors">
+                                Distribusi Elpiji</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Layanan penyediaan dan distribusi gas LPG yang handal untuk memenuhi kebutuhan memasak
+                                rumah tangga hingga operasional industri skala besar.
+                            </p>
+                        </div>
+                        <div class="relative z-10 mt-auto pt-4">
+                            <button class="flex items-center text-slate-900 text-sm font-bold group/btn"
+                                onclick="window.location.href='distribusi-elpiji.html'">
+                                <span class="mr-2 group-hover:text-orange-600 transition-colors">Lihat Detail</span>
+                                <span
+                                    class="material-symbols-outlined !text-[18px] transform transition-transform group-hover/btn:translate-x-1 text-orange-600">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer from index.html -->
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 text-slate-900 mb-6">
+                        <span class="material-symbols-outlined text-primary text-3xl">local_fire_department</span>
+                        <span class="text-xl font-bold">BisnisSPBU</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Penyedia energi terkemuka yang mengkhususkan diri dalam distribusi bahan bakar, logistik, dan
+                        solusi gas untuk Indonesia yang terus bergerak.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06s2.742.013 3.768.06z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-colors"
+                            href="#">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="about.html">Tentang
+                                Perusahaan</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="services.html">Layanan
+                                Kami</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="#">Keberlanjutan</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm" href="#">Karir</a>
+                        </li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="berita.html">Berita &amp;
+                                Acara</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-6">Layanan</h4>
+                    <ul class="space-y-4">
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="spbu-ritel.html">Stasiun SPBU</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="transporter-minyak.html">Distribusi BBM</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="distribusi-elpiji.html">LPG Industri</a></li>
+                        <li><a class="text-slate-500 hover:text-primary transition-colors text-sm"
+                                href="transporter-minyak.html">Armada Logistik</a></li>
+                    </ul>
+                </div>
+                <div id="contact">
+                    <h4 class="text-slate-900 font-bold mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-slate-500 text-sm">
+                            <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">location_on</span>
+                            <span>Jl. Nanga Pinoh- Kotabaru, km.4,<br />Kecamatan Nanga Pinoh, Kabupaten Melawi, Kode
+                                Pos 79672, Kalimantan Barat.</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 text-sm">
+                            <span class="material-symbols-outlined text-primary text-[20px]">call</span>
+                            <span>+62 858 2176 3662</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 text-sm">
+                            <span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+                            <span>spbufikridarmawan@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-xs">© 2026 BisnisSPBU. Hak Cipta Dilindungi.</p>
+                <div class="flex gap-6">
+                    <a class="text-slate-500 hover:text-primary text-xs transition-colors" href="#">Kebijakan
+                        Privasi</a>
+                    <a class="text-slate-500 hover:text-primary text-xs transition-colors" href="#">Syarat Layanan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
