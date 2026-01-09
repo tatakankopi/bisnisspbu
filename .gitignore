@@ -1,4 +1,4 @@
-wp-themes/
-wp-themes
+wp-theme/
+wp-theme
 # Prevent zip files from being pushed
 *.zip
